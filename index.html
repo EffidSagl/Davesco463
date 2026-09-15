@@ -7,7 +7,7 @@
   <title>Davesco 463 | Nuovi appartamenti a Davesco-Soragno</title>
 
   <meta name="description"
-        content="Nuovi appartamenti 3.5 e 4.5 locali in Via Cailà a Davesco-Soragno, a pochi minuti da Lugano. Scopri il progetto Davesco 463.">
+        content="Nuovi appartamenti 3.5 e 4.5 locali in Via Cailà a Davesco-Soragno, a pochi minuti da Lugano. 8 appartamenti distribuiti in due edifici.">
 
   <style>
 
@@ -44,7 +44,9 @@
     }
 
 
-    /* ---------------- NAVIGATION ---------------- */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       position: absolute;
@@ -76,7 +78,7 @@
     }
 
     .nav-links a {
-      opacity: .85;
+      opacity: .82;
       transition: .2s;
     }
 
@@ -85,22 +87,21 @@
     }
 
 
-    /* ---------------- HERO ---------------- */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       height: 100vh;
       min-height: 680px;
-
       position: relative;
-
       display: flex;
       align-items: flex-end;
-
       color: white;
 
       background:
         linear-gradient(
-          rgba(0,0,0,.05),
+          rgba(0,0,0,.04),
           rgba(0,0,0,.52)
         ),
         url("images/hero.jpg");
@@ -130,7 +131,7 @@
     }
 
     .hero-description {
-      max-width: 600px;
+      max-width: 620px;
       font-size: 20px;
       margin-bottom: 35px;
     }
@@ -149,7 +150,9 @@
     }
 
 
-    /* ---------------- GENERAL ---------------- */
+    /* =========================
+       GENERAL
+    ========================= */
 
     section {
       padding: 120px 0;
@@ -176,7 +179,9 @@
     }
 
 
-    /* ---------------- INTRO ---------------- */
+    /* =========================
+       INTRO
+    ========================= */
 
     .intro-grid {
       display: grid;
@@ -186,7 +191,9 @@
     }
 
 
-    /* ---------------- FULL IMAGE ---------------- */
+    /* =========================
+       FULL IMAGE
+    ========================= */
 
     .full-image {
       height: 78vh;
@@ -198,7 +205,9 @@
     }
 
 
-    /* ---------------- PROJECT ---------------- */
+    /* =========================
+       PROJECT
+    ========================= */
 
     .project {
       background: #22241f;
@@ -206,7 +215,7 @@
     }
 
     .project h2 {
-      max-width: 800px;
+      max-width: 820px;
     }
 
     .feature-grid {
@@ -224,6 +233,7 @@
     .feature-big {
       font-size: 38px;
       margin-bottom: 8px;
+      letter-spacing: -1px;
     }
 
     .feature strong {
@@ -237,15 +247,41 @@
     }
 
 
-    /* ---------------- APARTMENTS ---------------- */
+    /* =========================
+       APARTMENTS
+    ========================= */
 
     .apartments-intro {
-      max-width: 760px;
-      margin-bottom: 65px;
+      max-width: 800px;
+      margin-bottom: 40px;
     }
 
     .apartments-intro h2 {
       margin-bottom: 30px;
+    }
+
+    .building-title {
+      margin-top: 75px;
+      padding: 18px 10px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      border-top: 2px solid #1b1b19;
+
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .building-title span:last-child {
+      opacity: .45;
+      font-size: 11px;
+    }
+
+    .second-building {
+      margin-top: 90px;
     }
 
     .apartment-table {
@@ -280,7 +316,9 @@
     }
 
 
-    /* ---------------- LIVING ---------------- */
+    /* =========================
+       LIVING
+    ========================= */
 
     .living {
       background: white;
@@ -303,7 +341,9 @@
     }
 
 
-    /* ---------------- LOCATION ---------------- */
+    /* =========================
+       LOCATION
+    ========================= */
 
     .location {
       background: #dedfd8;
@@ -316,7 +356,7 @@
     }
 
     .location h2 {
-      max-width: 520px;
+      max-width: 540px;
     }
 
     .location-list {
@@ -334,10 +374,13 @@
 
     .location-item strong {
       font-weight: 500;
+      text-align: right;
     }
 
 
-    /* ---------------- CONTACT ---------------- */
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
       background: #111;
@@ -351,14 +394,16 @@
     }
 
     .contact p {
-      max-width: 580px;
+      max-width: 600px;
       margin: 30px auto 35px;
       opacity: .7;
       font-size: 18px;
     }
 
 
-    /* ---------------- FOOTER ---------------- */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 35px 0;
@@ -375,7 +420,9 @@
     }
 
 
-    /* ---------------- MOBILE ---------------- */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 800px) {
 
@@ -415,12 +462,18 @@
         height: 450px;
       }
 
+      .building-title {
+        margin-top: 55px;
+      }
+
+      .second-building {
+        margin-top: 70px;
+      }
+
       .apartment-table {
         font-size: 13px;
       }
 
-      .apartment-table th:nth-child(4),
-      .apartment-table td:nth-child(4),
       .apartment-table th:nth-child(5),
       .apartment-table td:nth-child(5) {
         display: none;
@@ -433,6 +486,33 @@
 
     }
 
+
+    @media (max-width: 520px) {
+
+      .container {
+        width: 90%;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .feature-big {
+        font-size: 32px;
+      }
+
+      .apartment-table th,
+      .apartment-table td {
+        padding: 16px 5px;
+      }
+
+      .apartment-table th:nth-child(3),
+      .apartment-table td:nth-child(3) {
+        display: none;
+      }
+
+    }
+
   </style>
 </head>
 
@@ -440,7 +520,9 @@
 <body>
 
 
-<!-- NAV -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -465,7 +547,9 @@
 
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
@@ -481,9 +565,11 @@
     </h1>
 
     <p class="hero-description">
-      Nuovi appartamenti 3.5 e 4.5 locali
+
+      Otto nuovi appartamenti 3.5 e 4.5 locali
       in Via Cailà, in un contesto residenziale
       tranquillo a pochi minuti da Lugano.
+
     </p>
 
     <a href="#appartamenti" class="button">
@@ -496,7 +582,9 @@
 
 
 
-<!-- INTRO -->
+<!-- =========================
+     INTRO
+========================= -->
 
 <section id="progetto">
 
@@ -505,7 +593,7 @@
     <div>
 
       <div class="section-label">
-        Davesco 463
+        Il progetto
       </div>
 
       <h2>
@@ -515,17 +603,23 @@
 
     </div>
 
+
     <div class="large-text">
 
-      Il progetto sorge in <strong>Via Cailà a Davesco-Soragno</strong>,
-      in una posizione residenziale tranquilla e ben collegata
-      con Lugano.
+      In <strong>Via Cailà a Davesco-Soragno</strong> nasce
+      una nuova residenza composta da due edifici di soli
+      quattro appartamenti ciascuno.
 
       <br><br>
 
-      Gli appartamenti sono progettati per offrire ambienti
-      luminosi e funzionali, con una particolare attenzione
-      alla qualità degli spazi interni ed esterni.
+      Una dimensione raccolta e residenziale, con appartamenti
+      3.5 e 4.5 locali distribuiti tra piano terreno e primo piano.
+
+      <br><br>
+
+      Ambienti luminosi e funzionali sono pensati per offrire
+      comfort, qualità abitativa e una piacevole relazione
+      tra gli spazi interni ed esterni.
 
     </div>
 
@@ -535,40 +629,46 @@
 
 
 
-<!-- EXTERIOR IMAGE -->
+<!-- =========================
+     EXTERIOR IMAGE
+========================= -->
 
 <div class="full-image"></div>
 
 
 
-<!-- PROJECT FEATURES -->
+<!-- =========================
+     PROJECT NUMBERS
+========================= -->
 
 <section class="project">
 
   <div class="container">
 
     <div class="section-label">
-      Il progetto
+      La residenza
     </div>
 
     <h2>
-      Spazi contemporanei pensati per la vita quotidiana.
+      Due edifici.<br>
+      Otto appartamenti.
     </h2>
 
 
     <div class="feature-grid">
 
+
       <div class="feature">
 
         <div class="feature-big">
-          3.5
+          2
         </div>
 
-        <strong>Locali</strong>
+        <strong>Edifici</strong>
 
         <p>
-          Spazi funzionali per coppie,
-          piccole famiglie e home office.
+          Due volumi residenziali,
+          ciascuno composto da quattro appartamenti.
         </p>
 
       </div>
@@ -577,14 +677,14 @@
       <div class="feature">
 
         <div class="feature-big">
-          4.5
+          8
         </div>
 
-        <strong>Locali</strong>
+        <strong>Appartamenti</strong>
 
         <p>
-          Più spazio per la famiglia
-          e per vivere la casa ogni giorno.
+          Soluzioni 3.5 e 4.5 locali
+          distribuite su due livelli.
         </p>
 
       </div>
@@ -593,14 +693,14 @@
       <div class="feature">
 
         <div class="feature-big">
-          380
+          106 m²
         </div>
 
-        <strong>m s.l.m.</strong>
+        <strong>3.5 locali</strong>
 
         <p>
-          Posizione residenziale
-          sulle colline di Lugano.
+          Spazi generosi e funzionali
+          per la vita quotidiana.
         </p>
 
       </div>
@@ -609,17 +709,18 @@
       <div class="feature">
 
         <div class="feature-big">
-          463
+          130 m²
         </div>
 
-        <strong>Mappale</strong>
+        <strong>4.5 locali</strong>
 
         <p>
-          Via Cailà,
-          Davesco-Soragno.
+          Ampie superfici pensate
+          per la famiglia.
         </p>
 
       </div>
+
 
     </div>
 
@@ -629,11 +730,14 @@
 
 
 
-<!-- APARTMENTS -->
+<!-- =========================
+     APARTMENTS
+========================= -->
 
 <section id="appartamenti">
 
   <div class="container">
+
 
     <div class="apartments-intro">
 
@@ -646,9 +750,23 @@
       </h2>
 
       <p class="large-text">
-        Diverse soluzioni 3.5 e 4.5 locali.
-        Consulta le unità attualmente disponibili.
+
+        Ogni edificio ospita quattro appartamenti:
+        un 3.5 e un 4.5 locali al piano terreno e
+        un 3.5 e un 4.5 locali al primo piano.
+
       </p>
+
+    </div>
+
+
+
+    <!-- EDIFICIO 01 -->
+
+    <div class="building-title">
+
+      <span>Edificio 01</span>
+      <span>4 appartamenti</span>
 
     </div>
 
@@ -662,7 +780,6 @@
           <th>Locali</th>
           <th>Piano</th>
           <th>Superficie</th>
-          <th>Esterno</th>
           <th>Prezzo</th>
           <th>Stato</th>
         </tr>
@@ -673,33 +790,37 @@
       <tbody>
 
         <tr>
-          <td>02</td>
+          <td>01</td>
           <td>3.5</td>
-          <td>Piano terra</td>
-          <td>— m²</td>
-          <td>—</td>
+          <td>Piano terreno</td>
+          <td>106 m²</td>
           <td>CHF —</td>
           <td class="available">Disponibile</td>
         </tr>
 
+        <tr>
+          <td>02</td>
+          <td>4.5</td>
+          <td>Piano terreno</td>
+          <td>130 m²</td>
+          <td>CHF —</td>
+          <td class="available">Disponibile</td>
+        </tr>
 
         <tr>
           <td>03</td>
-          <td>4.5</td>
+          <td>3.5</td>
           <td>1° piano</td>
-          <td>— m²</td>
-          <td>—</td>
+          <td>106 m²</td>
           <td>CHF —</td>
           <td class="available">Disponibile</td>
         </tr>
 
-
         <tr>
           <td>04</td>
-          <td>3.5</td>
-          <td>Piano terra</td>
-          <td>— m²</td>
-          <td>—</td>
+          <td>4.5</td>
+          <td>1° piano</td>
+          <td>130 m²</td>
           <td>CHF —</td>
           <td class="available">Disponibile</td>
         </tr>
@@ -708,22 +829,96 @@
 
     </table>
 
+
+
+    <!-- EDIFICIO 02 -->
+
+    <div class="building-title second-building">
+
+      <span>Edificio 02</span>
+      <span>4 appartamenti</span>
+
+    </div>
+
+
+    <table class="apartment-table">
+
+      <thead>
+
+        <tr>
+          <th>App.</th>
+          <th>Locali</th>
+          <th>Piano</th>
+          <th>Superficie</th>
+          <th>Prezzo</th>
+          <th>Stato</th>
+        </tr>
+
+      </thead>
+
+
+      <tbody>
+
+        <tr>
+          <td>05</td>
+          <td>3.5</td>
+          <td>Piano terreno</td>
+          <td>106 m²</td>
+          <td>CHF —</td>
+          <td class="available">Disponibile</td>
+        </tr>
+
+        <tr>
+          <td>06</td>
+          <td>4.5</td>
+          <td>Piano terreno</td>
+          <td>130 m²</td>
+          <td>CHF —</td>
+          <td class="available">Disponibile</td>
+        </tr>
+
+        <tr>
+          <td>07</td>
+          <td>3.5</td>
+          <td>1° piano</td>
+          <td>106 m²</td>
+          <td>CHF —</td>
+          <td class="available">Disponibile</td>
+        </tr>
+
+        <tr>
+          <td>08</td>
+          <td>4.5</td>
+          <td>1° piano</td>
+          <td>130 m²</td>
+          <td>CHF —</td>
+          <td class="available">Disponibile</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+
   </div>
 
 </section>
 
 
 
-<!-- LIVING -->
+<!-- =========================
+     LIVING
+========================= -->
 
 <section class="living">
 
   <div class="container living-grid">
 
+
     <div>
 
       <div class="section-label">
-        Vivere
+        Abitare
       </div>
 
       <h2>
@@ -733,15 +928,16 @@
 
       <p class="large-text">
 
-        Ambienti contemporanei, proporzioni generose
-        e una relazione diretta tra gli spazi della casa
-        e l'esterno.
+        Gli appartamenti sono caratterizzati da ambienti
+        generosi e contemporanei, pensati per adattarsi
+        alle esigenze della vita quotidiana.
 
         <br><br>
 
-        Un progetto pensato per offrire una qualità
-        abitativa duratura, in un contesto tranquillo
-        senza rinunciare alla vicinanza con la città.
+        Le tipologie da 106 m² e 130 m² offrono spazi
+        confortevoli per coppie e famiglie, mantenendo
+        un rapporto equilibrato tra zona giorno,
+        camere e spazi esterni.
 
       </p>
 
@@ -756,17 +952,21 @@
 
     </div>
 
+
   </div>
 
 </section>
 
 
 
-<!-- LOCATION -->
+<!-- =========================
+     LOCATION
+========================= -->
 
 <section class="location" id="posizione">
 
   <div class="container location-grid">
+
 
     <div>
 
@@ -775,8 +975,8 @@
       </div>
 
       <h2>
-        Davesco-Soragno.<br>
-        Lugano a portata di mano.
+        Tranquillità.<br>
+        Vicino alla città.
       </h2>
 
     </div>
@@ -786,9 +986,10 @@
 
       <p class="large-text">
 
-        Via Cailà offre un contesto residenziale
-        tranquillo, mantenendo un collegamento rapido
-        con Lugano e con i principali servizi della regione.
+        La residenza si trova in <strong>Via Cailà,
+        Davesco-Soragno</strong>, in un contesto residenziale
+        tranquillo e ben collegato con Lugano e con i principali
+        servizi della regione.
 
       </p>
 
@@ -796,18 +997,23 @@
       <div class="location-list">
 
         <div class="location-item">
+          <span>Davesco-Soragno</span>
+          <strong>Zona residenziale</strong>
+        </div>
+
+        <div class="location-item">
           <span>Scuole</span>
-          <strong>nelle vicinanze</strong>
+          <strong>Nelle vicinanze</strong>
         </div>
 
         <div class="location-item">
           <span>Liceo Lugano 2</span>
-          <strong>facilmente raggiungibile</strong>
+          <strong>Facilmente raggiungibile</strong>
         </div>
 
         <div class="location-item">
           <span>Lugano</span>
-          <strong>pochi minuti</strong>
+          <strong>Pochi minuti</strong>
         </div>
 
         <div class="location-item">
@@ -817,6 +1023,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -825,7 +1032,9 @@
 
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="contact" id="contatto">
 
@@ -836,19 +1045,23 @@
     </div>
 
     <h2>
-      Vuoi scoprire Davesco 463?
+      Scopri la tua nuova casa a Davesco.
     </h2>
 
     <p>
+
       Richiedi la documentazione completa,
       le planimetrie e il listino prezzi oppure
       contattaci per organizzare una visita.
+
     </p>
 
     <a
       class="button"
       href="mailto:INSERISCI-LA-TUA-EMAIL">
+
       Richiedi informazioni
+
     </a>
 
   </div>
@@ -857,7 +1070,9 @@
 
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
