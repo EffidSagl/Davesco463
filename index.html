@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Residenza San Martino | Vezia</title>
+  <meta name="description" content="Nuovi appartamenti 3.5 e 4.5 locali a Vezia, a pochi minuti da Lugano. Architettura contemporanea, terrazze, giardini privati ed elevata efficienza energetica.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1d1d1b;
+      background: #f7f7f4;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 88%);
+      margin: auto;
+    }
+
+    /* NAV */
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 28px 0;
+      color: white;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-size: 14px;
+    }
+
+    /* HERO */
+
+    .hero {
+      height: 100vh;
+      min-height: 680px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      color: white;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.08),
+          rgba(0,0,0,0.48)
+        ),
+        url("images/hero.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      padding-bottom: 90px;
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 7vw, 92px);
+      line-height: 0.98;
+      font-weight: 400;
+      letter-spacing: -3px;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      background: white;
+      color: #111;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    .button:hover {
+      background: #e7e7e2;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 120px 0;
+    }
+
+    .section-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 30px;
+      opacity: 0.55;
+    }
+
+    h2 {
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.08;
+      font-weight: 400;
+      letter-spacing: -2px;
+      margin-bottom: 35px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 100px;
+      align-items: end;
+    }
+
+    .large-text {
+      font-size: 21px;
+      max-width: 620px;
+    }
+
+    /* IMAGE */
+
+    .full-image {
+      height: 75vh;
+      min-height: 550px;
+      background: url("images/exterior.jpg") center / cover;
+    }
+
+    /* FEATURES */
+
+    .features {
+      background: #20231f;
+      color: white;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px;
+      margin-top: 70px;
+    }
+
+    .feature {
+      border-top: 1px solid rgba(255,255,255,.3);
+      padding-top: 22px;
+    }
+
+    .feature-number {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      opacity: 0.72;
+      font-size: 14px;
+    }
+
+    /* APARTMENTS */
+
+    .apartments-header {
+      max-width: 700px;
+      margin-bottom: 60px;
+    }
+
+    .apartment-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .apartment-table th,
+    .apartment-table td {
+      text-align: left;
+      padding: 20px 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .apartment-table th {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      opacity: .55;
+    }
+
+    .available {
+      color: #456347;
+    }
+
+    /* LOCATION */
+
+    .location {
+      background: #dedfd8;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+    }
+
+    .location-list {
+      margin-top: 40px;
+    }
+
+    .location-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      max-width: 800px;
+      margin: 0 auto 35px;
+    }
+
+    .contact p {
+      opacity: .7;
+      margin-bottom: 35px;
+    }
+
+    footer {
+      background: #111;
+      color: rgba(255,255,255,.55);
+      padding: 35px 0;
+      border-top: 1px solid rgba(255,255,255,.15);
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 620px;
+      }
+
+      .hero-content {
+        padding-bottom: 60px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .intro-grid,
+      .location-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .apartment-table {
+        font-size: 13px;
+      }
+
+      .apartment-table th:nth-child(4),
+      .apartment-table td:nth-child(4) {
+        display: none;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="container nav-inner">
+
+    <div class="logo">
+      Residenza San Martino
+    </div>
+
+    <div class="nav-links">
+      <a href="#residenza">Residenza</a>
+      <a href="#appartamenti">Appartamenti</a>
+      <a href="#posizione">Posizione</a>
+      <a href="#contatto">Contatto</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+  <div class="container hero-content">
+
+    <div class="eyebrow">
+      Nuova residenza · Vezia
+    </div>
+
+    <h1>
+      Vivere vicino a Lugano.
+    </h1>
+
+    <p>
+      Nuovi appartamenti 3.5 e 4.5 locali in un contesto
+      residenziale tranquillo, luminoso e contemporaneo.
+    </p>
+
+    <a class="button" href="#appartamenti">
+      Scopri gli appartamenti
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- INTRO -->
+
+<section id="residenza">
+
+  <div class="container intro-grid">
+
+    <div>
+      <div class="section-label">
+        La residenza
+      </div>
+
+      <h2>
+        Spazio, luce e tranquillità.
+      </h2>
+    </div>
+
+    <div class="large-text">
+      In Via San Martino a Vezia nasce una nuova residenza
+      composta da due eleganti edifici di soli quattro
+      appartamenti ciascuno.
+
+      <br><br>
+
+      Ampie vetrate, terrazze generose e giardini privati
+      creano una naturale continuità tra gli spazi interni
+      e il paesaggio circostante.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BIG IMAGE -->
+
+<div class="full-image"></div>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+  <div class="container">
+
+    <div class="section-label">
+      Comfort
+    </div>
+
+    <h2>
+      Pensata per vivere bene.
+    </h2>
+
+    <div class="feature-grid">
+
+      <div class="feature">
+        <div class="feature-number">8</div>
+        <strong>Appartamenti</strong>
+        <p>
+          Una residenza raccolta composta da due edifici.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-number">3.5</div>
+        <strong>Locali</strong>
+        <p>
+          Soluzioni efficienti e luminose.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-number">4.5</div>
+        <strong>Locali</strong>
+        <p>
+          Più spazio per la famiglia e il lavoro da casa.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-number">A</div>
+        <strong>CECE</strong>
+        <p>
+          Elevata efficienza energetica e comfort abitativo.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- APARTMENTS -->
+
+<section id="appartamenti">
+
+  <div class="container">
+
+    <div class="apartments-header">
+
+      <div class="section-label">
+        Appartamenti
+      </div>
+
+      <h2>
+        Trova il tuo spazio.
+      </h2>
+
+      <p class="large-text">
+        Appartamenti 3.5 e 4.5 locali distribuiti tra
+        piano terra e primo piano, con terrazze o giardini privati.
+      </p>
+
+    </div>
+
+
+    <table class="apartment-table">
+
+      <thead>
+        <tr>
+          <th>App.</th>
+          <th>Locali</th>
+          <th>Piano</th>
+          <th>Superficie</th>
+          <th>Esterno</th>
+          <th>Prezzo</th>
+          <th>Stato</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>01</td>
+          <td>3.5</td>
+          <td>PT</td>
+          <td>— m²</td>
+          <td>Giardino</td>
+          <td>CHF —</td>
+          <td class="available">Disponibile</td>
+        </tr>
+
+        <tr>
+          <td>02</td>
+          <td>4.5</td>
+          <td>PT</td>
+          <td>— m²</td>
+          <td>Giardino</td>
+          <td>CHF —</td>
+          <td class="available">Disponibile</td>
+        </tr>
+
+        <tr>
+          <td>03</td>
+          <td>4.5</td>
+          <td>1°</td>
+          <td>— m²</td>
+          <td>Terrazza</td>
+          <td>CHF —</td>
+          <td class="available">Disponibile</td>
+        </tr>
+
+        <tr>
+          <td>04</td>
+          <td>3.5</td>
+          <td>1°</td>
+          <td>— m²</td>
+          <td>Terrazza</td>
+          <td>CHF —</td>
+          <td class="available">Disponibile</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section class="location" id="posizione">
+
+  <div class="container location-grid">
+
+    <div>
+
+      <div class="section-label">
+        Posizione
+      </div>
+
+      <h2>
+        Vezia.<br>
+        A due passi da Lugano.
+      </h2>
+
+    </div>
+
+
+    <div>
+
+      <p class="large-text">
+        Una posizione residenziale tranquilla e soleggiata,
+        con vista aperta sulla vallata del Vedeggio e sul
+        caratteristico nucleo di Vezia.
+      </p>
+
+      <div class="location-list">
+
+        <div class="location-item">
+          <span>Lugano centro</span>
+          <strong>pochi minuti</strong>
+        </div>
+
+        <div class="location-item">
+          <span>Scuole</span>
+          <strong>nelle vicinanze</strong>
+        </div>
+
+        <div class="location-item">
+          <span>Trasporti pubblici</span>
+          <strong>nelle vicinanze</strong>
+        </div>
+
+        <div class="location-item">
+          <span>Accesso autostradale</span>
+          <strong>rapido</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contatto">
+
+  <div class="container">
+
+    <div class="section-label">
+      Contatto
+    </div>
+
+    <h2>
+      Scopri la tua nuova casa a Vezia.
+    </h2>
+
+    <p>
+      Richiedi la documentazione completa, le planimetrie
+      oppure organizza una visita.
+    </p>
+
+    <a class="button" href="mailto:INSERISCI-LA-TUA-EMAIL">
+      Richiedi informazioni
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <span>
+      © 2026 Residenza San Martino · Vezia
+    </span>
+
+    <span>
+      Vendita diretta · Effid Sagl
+    </span>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
